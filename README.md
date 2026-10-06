@@ -1,3 +1,5 @@
+<div align="center">
+
 # OmniReasoning: Pushing the Limits of Audio-Visual Joint Reasoning
 
 <p>
@@ -17,6 +19,8 @@
     <img alt="License" src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-2ea44f.svg?style=for-the-badge">
   </a>
 </p>
+
+</div>
 
 
 **OmniQA** constructs audio-visual joint reasoning data. **OmniReasoningBench** evaluates
