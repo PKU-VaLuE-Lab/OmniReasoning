@@ -23,16 +23,21 @@
 </div>
 
 
+<div align="center">
+
 **OmniQA** constructs audio-visual joint reasoning data. **OmniReasoningBench** evaluates
 *reasoning over video* and *reasoning beyond video*.
 The released datasets are **OmniReasoning-SFT-112K** (112,463 samples with synthesized thinking)
 and **OmniReasoning-RL-19K** (18,991 questions with evidence annotations), retained from the
 original 116,217 SFT and 19,849 RL samples; the benchmark has **1,150 questions**.
 
-
 [<img src="assets/readme/123.png" alt="Training data statistics — data type distribution, disciplinary coverage, and task category" width="800">](assets/readme/123.png)
 
+</div>
+
 ### OmniReasoningBench
+
+<div align="center">
 
 OmniReasoningBench contains 750 *reasoning over video* questions (375 multiple-choice, 375
 open-ended) and 400 *reasoning beyond video* questions (250 multiple-choice, 150 open-ended;
@@ -41,11 +46,17 @@ evidence chain.
 
 [<img src="./assets/readme/benchmark.png" alt="Task taxonomy and examples from OmniReasoningBench" width="760">](./assets/readme/benchmark.png)
 
+</div>
+
 ### Results on OmniReasoningBench
+
+<div align="center">
 
 [<img src="./assets/readme/benchmark_results.png" alt="OmniReasoningBench accuracy — paper Table 1" width="800">](./assets/readme/benchmark_results.png)
 
 All figures are from the paper. Click an image to open the original resolution.
+
+</div>
 
 ## Installation
 
@@ -69,7 +80,11 @@ Place source videos in `data/videos/`.
 
 ## OmniQA Data Engine
 
+<div align="center">
+
 [<img src="./assets/readme/data_engine.png" alt="The OmniQA data engine — paper figure" width="620">](./assets/readme/data_engine.png)
+
+</div>
 
 ### Stage 1: Caption Generation
 
