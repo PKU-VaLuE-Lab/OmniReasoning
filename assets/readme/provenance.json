@@ -1,0 +1,291 @@
+{
+  "format_version": 2,
+  "figures": [
+    {
+      "asset": "data_engine.png",
+      "source": "OmniReasoning/paper/figures/12313_cropped.pdf",
+      "source_pdf_sha256": "0a4bf3354e22c6398a1d7fbba85b25f62003301a78f2d961dff21606a023756d",
+      "included_by": "OmniReasoning/paper/sections/data.tex",
+      "section_sha256": "da9a346d57876c73428cb587c29d76c92f9e149154b93ae23f89b0ee17d260fb",
+      "caption": "OmniQA data engine. Gemini-3.1-Pro annotates timestamped audio-visual descriptions. Qwen3.8 generates QA pairs and reasoning steps, followed by clue validation and shortcut screening. Timestamped captions, verified QA pairs, and evidence chains then guide thinking generation.",
+      "conversion": "First PDF page rendered at original aspect ratio, longest edge 2600 px; no redrawing, cropping or text replacement.",
+      "asset_sha256": "a25f4dc8f26f4764cf8156b94f2a91b8109f5cff602a1d5f3a97faba7a9d9c1a"
+    },
+    {
+      "asset": "training_statistics.png",
+      "source": "OmniReasoning/paper/figures/Figure3_Statistics_Pastel_8Cases_Editable (1).pdf",
+      "source_pdf_sha256": "a0baa69acae426b060dbbed5ef1e7a039e7b8963b5c3a60201b7543a2d28a6ff",
+      "included_by": "OmniReasoning/paper/sections/data.tex",
+      "section_sha256": "da9a346d57876c73428cb587c29d76c92f9e149154b93ae23f89b0ee17d260fb",
+      "caption": "OmniReasoning released training-data distributions. The SFT and RL corpora span eight content domains, 25 production task types, and varied video durations.",
+      "conversion": "First PDF page rendered at original aspect ratio, longest edge 2600 px; no redrawing, cropping or text replacement.",
+      "asset_sha256": "02aae568091cb7c7690717c28bbce0213fc029cb03e3f34150e8c3417c4916b2"
+    },
+    {
+      "asset": "benchmark.png",
+      "source": "OmniReasoning/paper/figures/OmniReasoningBench_Demo_PaperPalette.pdf",
+      "source_pdf_sha256": "f8a2d59fc6703d7bbdd2b76aa0cd965659a6afc4a273dbcb507055a42f7fadc4",
+      "included_by": "OmniReasoning/paper/sections/benchmark.tex",
+      "section_sha256": "051cd257c6094e304a8a99a40090a58ac84cbf92ab67c4b6b54675e84bd5c5ab",
+      "caption": "Task taxonomy and examples from OmniReasoningBench. The top row illustrates reasoning over video through evidence integration across events; the bottom row illustrates reasoning beyond video through application of video-derived knowledge to new inputs. Orange and blue denote audio and visual clues. Numbered markers link timeline positions to supporting evidence. Questions and clues are condensed, and waveforms are schematic.",
+      "conversion": "First PDF page rendered at original aspect ratio, longest edge 2600 px; no redrawing, cropping or text replacement.",
+      "asset_sha256": "8c39341b3c84325f95cee61c0661e61a373dacf32533ec97d00c12e855df3c7e"
+    },
+    {
+      "asset": "mfsd.png",
+      "source": "OmniReasoning/paper/figures/mfsd_pipeline.pdf",
+      "source_pdf_sha256": "8891a72c5cccb3ef8696928047714a43b5ec88f5c373825f914c54fc2e125795",
+      "included_by": "OmniReasoning/paper/sections/method.tex",
+      "section_sha256": "05b83c1cb5d65d597c1b5ca17ca32e46702fc75023875e31de61e62157d25c4d",
+      "caption": "Modality-Factored Self-Distillation (MFSD). The actor scores the same response with no extra clues and with audio, visual, or joint clues, always retaining the original media. Centered clue interaction and joint support rescale token-level advantages while preserving their signs. Matrix superscripts index tokens and subscripts index responses.",
+      "conversion": "First PDF page rendered at original aspect ratio, longest edge 2600 px; no redrawing, cropping or text replacement.",
+      "asset_sha256": "c9e77e20aebfda67c297f830ac25594c73ed47e99785763b1bf9649defdb40de"
+    },
+    {
+      "asset": "benchmark_results.png",
+      "source": "OmniReasoning/paper/main.pdf",
+      "source_pdf_sha256": "26d50cac390a4743aab00c23e4a4606cf806249a66cfe5b4d112807320060988",
+      "included_by": "OmniReasoning/paper/tables/main.tex",
+      "section_sha256": "f44495ab86bd57581c69feab951dea3c64461e4f0413cbc10a5810292a1a1d6b",
+      "caption": "Table 1: OmniReasoningBench accuracy (%). MCQ and OE denote multiple-choice and open-ended questions. Our model is initialized by Qwen3-Omni-30B-A3B-Thinking.",
+      "conversion": "Page 8 of the compiled paper, clip rect (105,80)-(508,340) pt rendered at 300 dpi; no redrawing or text replacement.",
+      "asset_sha256": "baccb149ff0e71c0014e0befe9480c92b1fbeea5e23984837fa42066dae43fbe"
+    }
+  ],
+  "paper_excerpts": [
+    {
+      "source": "sections/benchmark.tex",
+      "tex_start": 54,
+      "tex_end": 276,
+      "text": "OmniReasoningBench evaluates evidence integration and knowledge transfer through 750 reasoning over video and 400 reasoning beyond video questions. Each has a reference answer and an annotated evidence chain."
+    }
+  ],
+  "hero": {
+    "asset": "hero.jpg",
+    "sha256": "e740c0acc268b8d4904a5417747db42fd13d011c3555975ba42c7a775b562ea5",
+    "description": "OmniReasoning video-frame wordmark."
+  },
+  "tables": [
+    {
+      "source": "OmniReasoning/paper/tables/main.tex",
+      "source_tex_sha256": "be28fc33e985bae4b368d78c80fcba6c818e92e3eb78f4ccb269b1ae4e7bc9e2",
+      "rendered_in": "README.md#results-on-omnireasoningbench",
+      "columns": [
+        "Model",
+        "Modality",
+        "Reasoning over video / MCQ",
+        "Reasoning over video / OE",
+        "Reasoning beyond video / MCQ",
+        "Reasoning beyond video / OE",
+        "Overall"
+      ],
+      "rows": [
+        {
+          "group": "Proprietary models",
+          "cells": [
+            "Gemini-3.5-Flash",
+            "Omni",
+            "53.5",
+            "47.2",
+            "66.4",
+            "51.3",
+            "54.0"
+          ]
+        },
+        {
+          "group": "Proprietary models",
+          "cells": [
+            "Gemini-3.1-Pro",
+            "Omni",
+            "51.9",
+            "47.2",
+            "64.0",
+            "49.3",
+            "52.7"
+          ]
+        },
+        {
+          "group": "Proprietary models",
+          "cells": [
+            "Qwen3.5-Omni-Plus",
+            "Omni",
+            "42.9",
+            "42.2",
+            "60.4",
+            "40.7",
+            "46.2"
+          ]
+        },
+        {
+          "group": "Proprietary models",
+          "cells": [
+            "MiMo-V2.5",
+            "Omni",
+            "42.7",
+            "40.6",
+            "54.0",
+            "44.0",
+            "44.6"
+          ]
+        },
+        {
+          "group": "Proprietary models",
+          "cells": [
+            "Muse-Spark-1.1",
+            "Omni",
+            "36.4",
+            "35.9",
+            "56.0",
+            "46.0",
+            "41.8"
+          ]
+        },
+        {
+          "group": "Proprietary models",
+          "cells": [
+            "Qwen3.8-Max",
+            "Visual",
+            "19.7",
+            "10.5",
+            "46.8",
+            "34.7",
+            "24.6"
+          ]
+        },
+        {
+          "group": "Proprietary models",
+          "cells": [
+            "Qwen3.5-Plus",
+            "Visual",
+            "17.2",
+            "8.7",
+            "46.0",
+            "30.0",
+            "22.5"
+          ]
+        },
+        {
+          "group": "Open-source models",
+          "cells": [
+            "Qwen3-Omni-30B-A3B-Thinking",
+            "Omni",
+            "31.9",
+            "25.9",
+            "46.4",
+            "32.0",
+            "33.2"
+          ]
+        },
+        {
+          "group": "Open-source models",
+          "cells": [
+            "Nemotron-3-Nano-Omni",
+            "Omni",
+            "25.6",
+            "22.9",
+            "36.0",
+            "13.3",
+            "25.4"
+          ]
+        },
+        {
+          "group": "Open-source models",
+          "cells": [
+            "Kimi-K3",
+            "Visual",
+            "21.4",
+            "11.7",
+            "50.8",
+            "35.3",
+            "26.5"
+          ]
+        },
+        {
+          "group": "Ours",
+          "cells": [
+            "OmniReasoning-30B-A3B",
+            "Omni",
+            "41.6",
+            "30.7",
+            "56.0",
+            "31.3",
+            "39.8"
+          ]
+        }
+      ],
+      "caption": "Table 1: Evaluation on OmniReasoningBench. Accuracies (%) cover multiple-choice (MCQ) and\nopen-ended (OE) questions: 375/375 for reasoning over video and 250/150 for reasoning beyond\nvideo. OmniReasoning improves overall accuracy from 33.2% to 39.8%. Overall pools evaluated\nquestions across settings and formats. Appendix A.2 details input protocols, scoring, and training-\nvideo exposure. ∗denotes an unmeasured result.",
+      "conversion": "Direct raster crop of Table 1, including its complete caption, from page 7 of the original paper PDF. Original layout, colors, model logos and numbers retained; no re-typesetting or redrawing.",
+      "asset": "benchmark_results.png",
+      "source_pdf": "OmniReasoning/paper/main.pdf",
+      "source_pdf_sha256": "2506e32cc5e743f37a6013e6dc8adeb0ca0c268ae3f2a09f1e1df027331a4403",
+      "source_pdf_page": 7,
+      "crop_box_pdf_points": [
+        104.0,
+        332.0,
+        508.0,
+        584.0
+      ],
+      "render_scale": 6.435643564356436,
+      "asset_sha256": "ba4c92c32bdda9050e6834062ef6d425868dd1d44bcfbabc7aab6a1d624dc76c"
+    }
+  ],
+  "badges": [
+    {
+      "asset": "badges/project_page.svg",
+      "asset_sha256": "fa76c8296bd720be8feb261eb2689903cd43b0b52af8de3aee2d4de8142e8b6d",
+      "icon_source": "https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/globe.svg",
+      "icon_source_sha256": "82c6b8fa0b8e8d775ec9becd86f74a4e50bff7bee4c81f7362de45348504f14d",
+      "icon_license": "ISC",
+      "status": "coming_soon",
+      "url": null,
+      "display_asset": "badges/project_page.png",
+      "display_asset_sha256": "538b5b598b680edba1dc157b3215614959c57add8d3a5648893b5c3a07c02ccf"
+    },
+    {
+      "asset": "badges/arxiv.svg",
+      "asset_sha256": "f3ab92e39ec623480dc21bc2338472461f245d760e22445fcbd9e19383cf90d1",
+      "icon_source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/arxiv.svg",
+      "icon_source_sha256": "79427b6fc11e06b5a3a2c70f31dbf536cf442fb1175d7f2573ff765f76f27930",
+      "icon_license": "CC0-1.0",
+      "status": "coming_soon",
+      "url": null,
+      "display_asset": "badges/arxiv.png",
+      "display_asset_sha256": "7ee6488b615d17169db91a0164f325e4eafaba364a9f43d64398e20a2babd4a0"
+    },
+    {
+      "asset": "badges/hugging_face.svg",
+      "asset_sha256": "7baa1e1756de4a36b24d14154120dee16c1b67f333e80a5ea1524e7e52ac5168",
+      "icon_source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/huggingface.svg",
+      "icon_source_sha256": "aa81744034eecf4ac6b3fb7108dd71223965c7af3c534932391314563b150109",
+      "icon_license": "CC0-1.0",
+      "status": "coming_soon",
+      "url": null,
+      "display_asset": "badges/hugging_face.png",
+      "display_asset_sha256": "2b9d3facec1b61db696e94bcdbce9c764e2221b6df0a2cdabada3f19d718393e"
+    },
+    {
+      "asset": "badges/qwen_blog.svg",
+      "asset_sha256": "0dd74331b3d4a68656d6402a45920a299527e7b09543152c272a0d5117f4fb72",
+      "icon_source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/qwen.svg",
+      "icon_source_sha256": "36854c60b26bfa5a0cc0d4123727c0ef559efba6f129c0dfa623f3c443fe3e5b",
+      "icon_license": "CC0-1.0",
+      "status": "available",
+      "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "display_asset": "badges/qwen_blog.png",
+      "display_asset_sha256": "821ec61f92451e3547a2c5c20d8be588005d465fb580c2c18a26abfd62691556"
+    }
+  ],
+  "readme_display": {
+    "policy": "Original full-resolution assets with explicit display widths; all navigation uses native Markdown headings and links.",
+    "figures": {
+      "hero.jpg": 780,
+      "benchmark.png": 760,
+      "benchmark_results.png": 800,
+      "data_engine.png": 580
+    },
+    "linked_figures": [
+      "training_statistics.png",
+      "mfsd.png"
+    ]
+  }
+}
