@@ -58,6 +58,26 @@ All figures are from the paper. Click an image to open the original resolution.
 
 </div>
 
+### MFSD
+
+<div align="center">
+
+[<img src="./assets/readme/mfsd.png" alt="The MFSD training framework — paper figure" width="800">](./assets/readme/mfsd.png)
+
+</div>
+
+### Results of OmniReasoning-30B-A3B
+
+<div align="center">
+
+[<img src="./assets/readme/results_30b_a3b_1.png" alt="OmniReasoning-30B-A3B results — paper figure 1" width="800">](./assets/readme/results_30b_a3b_1.png)
+
+[<img src="./assets/readme/results_30b_a3b_2.png" alt="OmniReasoning-30B-A3B results — paper figure 2" width="800">](./assets/readme/results_30b_a3b_2.png)
+
+[<img src="./assets/readme/results_30b_a3b_3.png" alt="OmniReasoning-30B-A3B results — paper figure 3" width="800">](./assets/readme/results_30b_a3b_3.png)
+
+</div>
+
 ## Installation
 
 Run all commands from the repository root. Requires **Python 3.10+** and **ffmpeg / ffprobe**.
