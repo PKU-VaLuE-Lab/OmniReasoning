@@ -19,11 +19,9 @@
     <img alt="Benchmark" src="https://img.shields.io/badge/OmniReasoningBench-Coming%20Soon-4c8bf5.svg?style=for-the-badge&logo=databricks&logoColor=white">
   </a>
   <a href="#-code--models">
-    <img alt="Code" src="https://img.shields.io/badge/Code%20%26%20Models-Coming%20Soon-f59e0b.svg?style=for-the-badge&logo=github&logoColor=white">
+    <img alt="Code" src="https://img.shields.io/badge/Data-Coming%20Soon-f59e0b.svg?style=for-the-badge&logo=github&logoColor=white">
   </a>
-  <a href="#-license">
-    <img alt="License" src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-2ea44f.svg?style=for-the-badge">
-  </a>
+
 </p>
 
 </div>
@@ -31,13 +29,15 @@
 
 <div align="center">
 
+
+[<img src="assets/readme/teaser.png" alt="Training data statistics — data type distribution, disciplinary coverage, and task category" width="640">](assets/readme/teaser.png)
+
 **OmniQA** constructs audio-visual joint reasoning data. **OmniReasoningBench** evaluates
 *reasoning over video* and *reasoning beyond video*.
 The released datasets are **OmniReasoning-SFT-112K** (112,463 samples with synthesized thinking)
 and **OmniReasoning-RL-19K** (18,991 questions with evidence annotations), retained from the
 original 116,217 SFT and 19,849 RL samples; the benchmark has **1,150 questions**.
 
-[<img src="assets/readme/123.png" alt="Training data statistics — data type distribution, disciplinary coverage, and task category" width="640">](assets/readme/123.png)
 
 </div>
 
