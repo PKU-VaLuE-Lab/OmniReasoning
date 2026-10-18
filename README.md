@@ -1,6 +1,12 @@
-<div align="center">
+<p align="center">
+  <img src="omnireasoning.png" alt="OmniReasoning mascot" width="108">
+</p>
 
-# OmniReasoning: Pushing the Limits of Audio-Visual Joint Reasoning
+<h1 align="center">OmniReasoning</h1>
+
+<p align="center"><strong>Pushing the Limits of Audio-Visual Joint Reasoning</strong></p>
+
+<div align="center">
 
 <p>
   <a href="https://pku-value-lab.github.io/OmniReasoning-Homepage/">
@@ -31,7 +37,7 @@ The released datasets are **OmniReasoning-SFT-112K** (112,463 samples with synth
 and **OmniReasoning-RL-19K** (18,991 questions with evidence annotations), retained from the
 original 116,217 SFT and 19,849 RL samples; the benchmark has **1,150 questions**.
 
-[<img src="assets/readme/123.png" alt="Training data statistics — data type distribution, disciplinary coverage, and task category" width="800">](assets/readme/123.png)
+[<img src="assets/readme/123.png" alt="Training data statistics — data type distribution, disciplinary coverage, and task category" width="640">](assets/readme/123.png)
 
 </div>
 
@@ -44,7 +50,7 @@ open-ended) and 400 *reasoning beyond video* questions (250 multiple-choice, 150
 288 video + figure and 112 video + text inputs). Each has a reference answer and an annotated
 evidence chain.
 
-[<img src="./assets/readme/benchmark.png" alt="Task taxonomy and examples from OmniReasoningBench" width="760">](./assets/readme/benchmark.png)
+[<img src="./assets/readme/benchmark.png" alt="Task taxonomy and examples from OmniReasoningBench" width="680">](./assets/readme/benchmark.png)
 
 </div>
 
@@ -52,7 +58,7 @@ evidence chain.
 
 <div align="center">
 
-[<img src="./assets/readme/benchmark_results.png" alt="OmniReasoningBench accuracy — paper Table 1" width="800">](./assets/readme/benchmark_results.png)
+[<img src="./assets/readme/benchmark_results.png" alt="OmniReasoningBench accuracy — paper Table 1" width="640">](./assets/readme/benchmark_results.png)
 
 All figures are from the paper. Click an image to open the original resolution.
 
@@ -62,7 +68,7 @@ All figures are from the paper. Click an image to open the original resolution.
 
 <div align="center">
 
-[<img src="./assets/readme/mfsd.png" alt="The MFSD training framework — paper figure" width="800">](./assets/readme/mfsd.png)
+[<img src="./assets/readme/mfsd.png" alt="The MFSD training framework — paper figure" width="640">](./assets/readme/mfsd.png)
 
 </div>
 
@@ -70,11 +76,11 @@ All figures are from the paper. Click an image to open the original resolution.
 
 <div align="center">
 
-[<img src="./assets/readme/results_30b_a3b_1.png" alt="OmniReasoning-30B-A3B results — paper figure 1" width="800">](./assets/readme/results_30b_a3b_1.png)
+[<img src="./assets/readme/results_30b_a3b_1.png" alt="OmniReasoning-30B-A3B results — paper figure 1" width="560">](./assets/readme/results_30b_a3b_1.png)
 
-[<img src="./assets/readme/results_30b_a3b_2.png" alt="OmniReasoning-30B-A3B results — paper figure 2" width="800">](./assets/readme/results_30b_a3b_2.png)
+[<img src="./assets/readme/results_30b_a3b_2.png" alt="OmniReasoning-30B-A3B results — paper figure 2" width="560">](./assets/readme/results_30b_a3b_2.png)
 
-[<img src="./assets/readme/results_30b_a3b_3.png" alt="OmniReasoning-30B-A3B results — paper figure 3" width="800">](./assets/readme/results_30b_a3b_3.png)
+[<img src="./assets/readme/results_30b_a3b_3.png" alt="OmniReasoning-30B-A3B results — paper figure 3" width="560">](./assets/readme/results_30b_a3b_3.png)
 
 </div>
 
@@ -102,7 +108,7 @@ Place source videos in `data/videos/`.
 
 <div align="center">
 
-[<img src="./assets/readme/data_engine.png" alt="The OmniQA data engine — paper figure" width="620">](./assets/readme/data_engine.png)
+[<img src="./assets/readme/data_engine.png" alt="The OmniQA data engine — paper figure" width="560">](./assets/readme/data_engine.png)
 
 </div>
 
