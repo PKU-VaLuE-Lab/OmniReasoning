@@ -236,8 +236,8 @@ evidence chain.
       <th align="center">Model</th>
       <th align="center">OmniVideoBench</th>
       <th align="center">LVOmniBench</th>
-      <th align="center">Video-MMMU</th>
-      <th align="center">Video-MME-v2</th>
+      <th align="center">Video&#8209;MMMU</th>
+      <th align="center">Video&#8209;MME&#8209;v2</th>
     </tr>
   </thead>
   <tbody>
@@ -459,7 +459,7 @@ Music, Sound, and Speech are audio types; duration intervals are in minutes.
 
 #### Training method ablation
 
-| Method | OmniReasoningBench | OmniVideoBench | LVOmniBench | Video-MME-v2 | Video-MMMU |
+| Method | OmniReasoningBench | OmniVideoBench | LVOmniBench | Video&#8209;MME&#8209;v2 | Video&#8209;MMMU |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | Qwen3&#8209;Omni&#8209;30B&#8209;A3B&#8209;Thinking | 33.2 | 37.2 | 37.7 | 36.5 | 68.3 |
 | + SFT | 36.1 | 47.0 | 40.2 | 40.3 | 73.7 |
