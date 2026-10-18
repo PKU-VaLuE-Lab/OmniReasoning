@@ -56,13 +56,28 @@ evidence chain.
 
 ### Results on OmniReasoningBench
 
-<div align="center">
+**OmniReasoningBench accuracy (%).** ROV = reasoning over video; RBY = reasoning beyond video. MCQ and OE denote multiple-choice and open-ended questions. Our model is initialized by Qwen3-Omni-30B-A3B-Thinking.
 
-[<img src="./assets/readme/benchmark_results.png" alt="OmniReasoningBench accuracy — paper Table 1" width="640">](./assets/readme/benchmark_results.png)
-
-All figures are from the paper. Click an image to open the original resolution.
-
-</div>
+| Model | Modality | ROV MCQ | ROV OE | RBY MCQ | RBY OE | Overall |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Proprietary models** |  |  |  |  |  |  |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.7-Flash | Omni | 57.6 | 47.7 | 72.0 | 58.0 | 57.6 |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.8-Flash | Omni | 55.2 | 49.6 | 69.6 | 60.0 | 57.1 |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.5-Flash | Omni | 53.5 | 47.2 | 66.4 | 51.3 | 54.0 |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.1-Pro | Omni | 51.9 | 47.2 | 64.0 | 49.3 | 52.7 |
+| <img src="assets/readme/model_logos/doubao.png" alt="doubao" height="18"> Doubao-2.0-Lite | Omni | 54.7 | 47.2 | 57.2 | 40.7 | 51.0 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3.5-Omni-Plus | Omni | 42.9 | 42.2 | 60.4 | 40.7 | 46.2 |
+| <img src="assets/readme/model_logos/meta.png" alt="meta" height="18"> Muse-Spark-1.2 | Omni | 38.1 | 36.0 | 60.0 | 58.0 | 44.8 |
+| <img src="assets/readme/model_logos/meta.png" alt="meta" height="18"> Muse-Spark-1.1 | Omni | 36.4 | 35.9 | 56.0 | 46.0 | 41.8 |
+| **Open-source models** |  |  |  |  |  |  |
+| <img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18"> MiMo-V2.5 | Omni | 42.7 | 40.6 | 54.0 | 44.0 | 44.6 |
+| <img src="assets/readme/model_logos/kimi.png" alt="kimi" height="18"> Kimi-K3 | Visual | 21.4 | 11.7 | 50.8 | 35.3 | 26.5 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3.8-Max | Visual | 19.7 | 10.5 | 46.8 | 34.7 | 24.6 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3.5-Plus | Visual | 17.2 | 8.7 | 46.0 | 30.0 | 22.5 |
+| <img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18"> Nemotron-3-Nano-Omni | Omni | 25.6 | 22.9 | 36.0 | 13.3 | 25.4 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3-Omni-30B-A3B-Thinking | Omni | 31.9 | 25.9 | 46.4 | 32.0 | 33.2 |
+| **Ours** |  |  |  |  |  |  |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> OmniReasoning-30B-A3B | Omni | 48.0 | 30.1 | 58.8 | 32.7 | 42.5 |
 
 ### MFSD
 
@@ -74,15 +89,52 @@ All figures are from the paper. Click an image to open the original resolution.
 
 ### Results of OmniReasoning-30B-A3B
 
-<div align="center">
+#### Performance across benchmarks
 
-[<img src="./assets/readme/results_30b_a3b_1.png" alt="OmniReasoning-30B-A3B results — paper figure 1" width="560">](./assets/readme/results_30b_a3b_1.png)
+| Model | OmniVideoBench | LVOmniBench | Video-MMMU | Video-MME-v2 |
+| :--- | ---: | ---: | ---: | ---: |
+| **Proprietary models** |  |  |  |  |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.5-Flash | 66.5 | 66.9 | 86.1 | 67.6 |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.1-Pro | 60.7 | 60.9 | 84.3 | 53.4 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3.5-Omni-Plus | 53.8 | 53.2 | 84.6 | 47.9 |
+| <img src="assets/readme/model_logos/meta.png" alt="meta" height="18"> Muse-Spark-1.1 | 55.8 | 52.3 | 85.2 | 59.5 |
+| <img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18"> MiMo-V2.5 | 51.6 | 52.8 | 79.1 | 51.8 |
+| **Open-source models** |  |  |  |  |
+| <img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18"> Nemotron-3-Nano-Omni | 42.1 | 32.1 | 73.1 | 38.4 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen2.5-Omni-7B | 29.3 | 32.0 | 53.9 | 25.3 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3-Omni-30B-A3B-Thinking | 37.2 | 37.7 | 68.3 | 36.5 |
+| **Ours** |  |  |  |  |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> OmniReasoning-30B-A3B | 50.0 | 44.7 | 74.4 | 44.0 |
 
-[<img src="./assets/readme/results_30b_a3b_2.png" alt="OmniReasoning-30B-A3B results — paper figure 2" width="560">](./assets/readme/results_30b_a3b_2.png)
+#### Performance by audio type and video duration
 
-[<img src="./assets/readme/results_30b_a3b_3.png" alt="OmniReasoning-30B-A3B results — paper figure 3" width="560">](./assets/readme/results_30b_a3b_3.png)
+Music, Sound, and Speech are audio types; duration intervals are in minutes.
 
-</div>
+| Model | Music | Sound | Speech | (0,1] min | (1,5] min | (5,10] min | (10,30] min | Avg. |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Proprietary models** |  |  |  |  |  |  |  |  |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.5-Flash | 56.9 | 69.3 | 70.1 | 69.7 | 68.0 | 63.9 | 64.8 | 66.5 |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.1-Pro | 51.1 | 65.8 | 61.9 | 67.3 | 64.2 | 59.5 | 53.0 | 60.7 |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3-Pro | 56.2 | 54.1 | 55.7 | 61.0 | 56.4 | 52.9 | 52.5 | 55.5 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3.5-Omni-Plus | 42.3 | 64.9 | 53.3 | 55.8 | 55.2 | 50.7 | 53.4 | 53.8 |
+| <img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18"> MiMo-V2.5 | 46.2 | 47.6 | 53.0 | 56.6 | 57.4 | 47.6 | 44.3 | 51.6 |
+| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-2.0-Flash | 29.7 | 40.3 | 43.2 | 49.4 | 43.2 | 41.1 | 34.9 | 41.5 |
+| **Open-source models** |  |  |  |  |  |  |  |  |
+| <img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18"> Nemotron-3-Nano-Omni | 33.0 | 42.9 | 43.0 | 48.8 | 41.7 | 41.5 | 38.9 | 42.1 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen2.5-Omni-7B | 23.1 | 25.3 | 30.7 | 41.6 | 27.4 | 25.3 | 26.7 | 29.3 |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> Qwen3-Omni-30B-A3B-Thinking | 26.4 | 37.2 | 38.5 | 46.8 | 35.6 | 35.5 | 35.2 | 37.2 |
+| **Ours** |  |  |  |  |  |  |  |  |
+| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18"> OmniReasoning-30B-A3B | 39.6 | 46.3 | 52.0 | 52.4 | 49.9 | 49.8 | 48.9 | 50.0 |
+
+#### Training method ablation
+
+| Method | OmniReasoningBench | OmniVideoBench | LVOmniBench | Video-MME-v2 | Video-MMMU |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Qwen3-Omni-30B-A3B-Thinking | 33.2 | 37.2 | 37.7 | 36.5 | 68.3 |
+| + SFT | 36.1 | 47.0 | 40.2 | 40.3 | 73.7 |
+| + GRPO | 38.3 | 44.8 | 39.8 | 39.1 | 72.9 |
+| + RLSD | 39.2 | 45.4 | 40.1 | 39.8 | 72.0 |
+| + MFSD | 42.5 | 50.0 | 44.7 | 44.0 | 74.4 |
 
 ## Installation
 
