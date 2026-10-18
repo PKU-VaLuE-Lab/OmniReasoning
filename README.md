@@ -58,7 +58,7 @@ evidence chain.
 
 **OmniReasoningBench accuracy (%).** Our model is initialized by Qwen3-Omni-30B-A3B-Thinking.
 
-| Model | Modality | Reasoning over video<br>Multiple-choice | Reasoning over video<br>Open-ended | Reasoning beyond video<br>Multiple-choice | Reasoning beyond video<br>Open-ended | Overall |
+| Model | Modality | Reasoning&nbsp;over&nbsp;video&nbsp;Multiple&#8209;choice | Reasoning&nbsp;over&nbsp;video&nbsp;Open&#8209;ended | Reasoning&nbsp;beyond&nbsp;video&nbsp;Multiple&#8209;choice | Reasoning&nbsp;beyond&nbsp;video&nbsp;Open&#8209;ended | Overall |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Proprietary models** |  |  |  |  |  |  |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.7-Flash | Omni | 57.6 | 47.7 | 72.0 | 58.0 | 57.6 |
