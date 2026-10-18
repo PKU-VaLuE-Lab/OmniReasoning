@@ -58,26 +58,165 @@ evidence chain.
 
 **OmniReasoningBench accuracy (%).** Our model is initialized by Qwen3-Omni-30B-A3B-Thinking.
 
-| Model | Modality | Reasoning over video<br>Multiple-choice | Reasoning over video<br>Open-ended | Reasoning beyond video<br>Multiple-choice | Reasoning beyond video<br>Open-ended | Overall |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Proprietary models** |  |  |  |  |  |  |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.7&#8209;Flash | Omni | 57.6 | 47.7 | 72.0 | 58.0 | 57.6 |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.8&#8209;Flash | Omni | 55.2 | 49.6 | 69.6 | 60.0 | 57.1 |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.5&#8209;Flash | Omni | 53.5 | 47.2 | 66.4 | 51.3 | 54.0 |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.1&#8209;Pro | Omni | 51.9 | 47.2 | 64.0 | 49.3 | 52.7 |
-| <img src="assets/readme/model_logos/doubao.png" alt="doubao" height="18">&nbsp;Doubao&#8209;2.0&#8209;Lite | Omni | 54.7 | 47.2 | 57.2 | 40.7 | 51.0 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Omni&#8209;Plus | Omni | 42.9 | 42.2 | 60.4 | 40.7 | 46.2 |
-| <img src="assets/readme/model_logos/meta.png" alt="meta" height="18">&nbsp;Muse&#8209;Spark&#8209;1.2 | Omni | 38.1 | 36.0 | 60.0 | 58.0 | 44.8 |
-| <img src="assets/readme/model_logos/meta.png" alt="meta" height="18">&nbsp;Muse&#8209;Spark&#8209;1.1 | Omni | 36.4 | 35.9 | 56.0 | 46.0 | 41.8 |
-| **Open-source models** |  |  |  |  |  |  |
-| <img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18">&nbsp;MiMo&#8209;V2.5 | Omni | 42.7 | 40.6 | 54.0 | 44.0 | 44.6 |
-| <img src="assets/readme/model_logos/kimi.png" alt="kimi" height="18">&nbsp;Kimi&#8209;K3 | Visual | 21.4 | 11.7 | 50.8 | 35.3 | 26.5 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.8&#8209;Max | Visual | 19.7 | 10.5 | 46.8 | 34.7 | 24.6 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Plus | Visual | 17.2 | 8.7 | 46.0 | 30.0 | 22.5 |
-| <img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18">&nbsp;Nemotron&#8209;3&#8209;Nano&#8209;Omni | Omni | 25.6 | 22.9 | 36.0 | 13.3 | 25.4 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3&#8209;Omni&#8209;30B&#8209;A3B&#8209;Thinking | Omni | 31.9 | 25.9 | 46.4 | 32.0 | 33.2 |
-| **Ours** |  |  |  |  |  |  |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;OmniReasoning&#8209;30B&#8209;A3B | Omni | 48.0 | 30.1 | 58.8 | 32.7 | 42.5 |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Model</th>
+      <th align="center">Modality</th>
+      <th align="center">Reasoning over video<br>Multiple-choice</th>
+      <th align="center">Reasoning over video<br>Open-ended</th>
+      <th align="center">Reasoning beyond video<br>Multiple-choice</th>
+      <th align="center">Reasoning beyond video<br>Open-ended</th>
+      <th align="center">Overall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="7" align="center"><strong>Proprietary models</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.7&#8209;Flash</td>
+      <td align="center">Omni</td>
+      <td align="center">57.6</td>
+      <td align="center">47.7</td>
+      <td align="center">72.0</td>
+      <td align="center">58.0</td>
+      <td align="center">57.6</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.8&#8209;Flash</td>
+      <td align="center">Omni</td>
+      <td align="center">55.2</td>
+      <td align="center">49.6</td>
+      <td align="center">69.6</td>
+      <td align="center">60.0</td>
+      <td align="center">57.1</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.5&#8209;Flash</td>
+      <td align="center">Omni</td>
+      <td align="center">53.5</td>
+      <td align="center">47.2</td>
+      <td align="center">66.4</td>
+      <td align="center">51.3</td>
+      <td align="center">54.0</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.1&#8209;Pro</td>
+      <td align="center">Omni</td>
+      <td align="center">51.9</td>
+      <td align="center">47.2</td>
+      <td align="center">64.0</td>
+      <td align="center">49.3</td>
+      <td align="center">52.7</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/doubao.png" alt="doubao" height="18">&nbsp;Doubao&#8209;2.0&#8209;Lite</td>
+      <td align="center">Omni</td>
+      <td align="center">54.7</td>
+      <td align="center">47.2</td>
+      <td align="center">57.2</td>
+      <td align="center">40.7</td>
+      <td align="center">51.0</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Omni&#8209;Plus</td>
+      <td align="center">Omni</td>
+      <td align="center">42.9</td>
+      <td align="center">42.2</td>
+      <td align="center">60.4</td>
+      <td align="center">40.7</td>
+      <td align="center">46.2</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/meta.png" alt="meta" height="18">&nbsp;Muse&#8209;Spark&#8209;1.2</td>
+      <td align="center">Omni</td>
+      <td align="center">38.1</td>
+      <td align="center">36.0</td>
+      <td align="center">60.0</td>
+      <td align="center">58.0</td>
+      <td align="center">44.8</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/meta.png" alt="meta" height="18">&nbsp;Muse&#8209;Spark&#8209;1.1</td>
+      <td align="center">Omni</td>
+      <td align="center">36.4</td>
+      <td align="center">35.9</td>
+      <td align="center">56.0</td>
+      <td align="center">46.0</td>
+      <td align="center">41.8</td>
+    </tr>
+    <tr>
+      <th colspan="7" align="center"><strong>Open-source models</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18">&nbsp;MiMo&#8209;V2.5</td>
+      <td align="center">Omni</td>
+      <td align="center">42.7</td>
+      <td align="center">40.6</td>
+      <td align="center">54.0</td>
+      <td align="center">44.0</td>
+      <td align="center">44.6</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/kimi.png" alt="kimi" height="18">&nbsp;Kimi&#8209;K3</td>
+      <td align="center">Visual</td>
+      <td align="center">21.4</td>
+      <td align="center">11.7</td>
+      <td align="center">50.8</td>
+      <td align="center">35.3</td>
+      <td align="center">26.5</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.8&#8209;Max</td>
+      <td align="center">Visual</td>
+      <td align="center">19.7</td>
+      <td align="center">10.5</td>
+      <td align="center">46.8</td>
+      <td align="center">34.7</td>
+      <td align="center">24.6</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Plus</td>
+      <td align="center">Visual</td>
+      <td align="center">17.2</td>
+      <td align="center">8.7</td>
+      <td align="center">46.0</td>
+      <td align="center">30.0</td>
+      <td align="center">22.5</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18">&nbsp;Nemotron&#8209;3&#8209;Nano&#8209;Omni</td>
+      <td align="center">Omni</td>
+      <td align="center">25.6</td>
+      <td align="center">22.9</td>
+      <td align="center">36.0</td>
+      <td align="center">13.3</td>
+      <td align="center">25.4</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3&#8209;Omni&#8209;30B&#8209;A3B&#8209;Thinking</td>
+      <td align="center">Omni</td>
+      <td align="center">31.9</td>
+      <td align="center">25.9</td>
+      <td align="center">46.4</td>
+      <td align="center">32.0</td>
+      <td align="center">33.2</td>
+    </tr>
+    <tr>
+      <th colspan="7" align="center"><strong>Ours</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;OmniReasoning&#8209;30B&#8209;A3B</td>
+      <td align="center">Omni</td>
+      <td align="center">48.0</td>
+      <td align="center">30.1</td>
+      <td align="center">58.8</td>
+      <td align="center">32.7</td>
+      <td align="center">42.5</td>
+    </tr>
+  </tbody>
+</table>
 
 ### MFSD
 
@@ -91,40 +230,232 @@ evidence chain.
 
 #### Performance across benchmarks
 
-| Model | OmniVideoBench | LVOmniBench | Video-MMMU | Video-MME-v2 |
-| :---: | :---: | :---: | :---: | :---: |
-| **Proprietary models** |  |  |  |  |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.5&#8209;Flash | 66.5 | 66.9 | 86.1 | 67.6 |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.1&#8209;Pro | 60.7 | 60.9 | 84.3 | 53.4 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Omni&#8209;Plus | 53.8 | 53.2 | 84.6 | 47.9 |
-| <img src="assets/readme/model_logos/meta.png" alt="meta" height="18">&nbsp;Muse&#8209;Spark&#8209;1.1 | 55.8 | 52.3 | 85.2 | 59.5 |
-| <img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18">&nbsp;MiMo&#8209;V2.5 | 51.6 | 52.8 | 79.1 | 51.8 |
-| **Open-source models** |  |  |  |  |
-| <img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18">&nbsp;Nemotron&#8209;3&#8209;Nano&#8209;Omni | 42.1 | 32.1 | 73.1 | 38.4 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen2.5&#8209;Omni&#8209;7B | 29.3 | 32.0 | 53.9 | 25.3 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3&#8209;Omni&#8209;30B&#8209;A3B&#8209;Thinking | 37.2 | 37.7 | 68.3 | 36.5 |
-| **Ours** |  |  |  |  |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;OmniReasoning&#8209;30B&#8209;A3B | 50.0 | 44.7 | 74.4 | 44.0 |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Model</th>
+      <th align="center">OmniVideoBench</th>
+      <th align="center">LVOmniBench</th>
+      <th align="center">Video-MMMU</th>
+      <th align="center">Video-MME-v2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="5" align="center"><strong>Proprietary models</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.5&#8209;Flash</td>
+      <td align="center">66.5</td>
+      <td align="center">66.9</td>
+      <td align="center">86.1</td>
+      <td align="center">67.6</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.1&#8209;Pro</td>
+      <td align="center">60.7</td>
+      <td align="center">60.9</td>
+      <td align="center">84.3</td>
+      <td align="center">53.4</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Omni&#8209;Plus</td>
+      <td align="center">53.8</td>
+      <td align="center">53.2</td>
+      <td align="center">84.6</td>
+      <td align="center">47.9</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/meta.png" alt="meta" height="18">&nbsp;Muse&#8209;Spark&#8209;1.1</td>
+      <td align="center">55.8</td>
+      <td align="center">52.3</td>
+      <td align="center">85.2</td>
+      <td align="center">59.5</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18">&nbsp;MiMo&#8209;V2.5</td>
+      <td align="center">51.6</td>
+      <td align="center">52.8</td>
+      <td align="center">79.1</td>
+      <td align="center">51.8</td>
+    </tr>
+    <tr>
+      <th colspan="5" align="center"><strong>Open-source models</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18">&nbsp;Nemotron&#8209;3&#8209;Nano&#8209;Omni</td>
+      <td align="center">42.1</td>
+      <td align="center">32.1</td>
+      <td align="center">73.1</td>
+      <td align="center">38.4</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen2.5&#8209;Omni&#8209;7B</td>
+      <td align="center">29.3</td>
+      <td align="center">32.0</td>
+      <td align="center">53.9</td>
+      <td align="center">25.3</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3&#8209;Omni&#8209;30B&#8209;A3B&#8209;Thinking</td>
+      <td align="center">37.2</td>
+      <td align="center">37.7</td>
+      <td align="center">68.3</td>
+      <td align="center">36.5</td>
+    </tr>
+    <tr>
+      <th colspan="5" align="center"><strong>Ours</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;OmniReasoning&#8209;30B&#8209;A3B</td>
+      <td align="center">50.0</td>
+      <td align="center">44.7</td>
+      <td align="center">74.4</td>
+      <td align="center">44.0</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Performance by audio type and video duration
 
 Music, Sound, and Speech are audio types; duration intervals are in minutes.
 
-| Model | Music | Sound | Speech | (0,1] minutes | (1,5] minutes | (5,10] minutes | (10,30] minutes | Average |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Proprietary models** |  |  |  |  |  |  |  |  |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.5&#8209;Flash | 56.9 | 69.3 | 70.1 | 69.7 | 68.0 | 63.9 | 64.8 | 66.5 |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.1&#8209;Pro | 51.1 | 65.8 | 61.9 | 67.3 | 64.2 | 59.5 | 53.0 | 60.7 |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3&#8209;Pro | 56.2 | 54.1 | 55.7 | 61.0 | 56.4 | 52.9 | 52.5 | 55.5 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Omni&#8209;Plus | 42.3 | 64.9 | 53.3 | 55.8 | 55.2 | 50.7 | 53.4 | 53.8 |
-| <img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18">&nbsp;MiMo&#8209;V2.5 | 46.2 | 47.6 | 53.0 | 56.6 | 57.4 | 47.6 | 44.3 | 51.6 |
-| <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;2.0&#8209;Flash | 29.7 | 40.3 | 43.2 | 49.4 | 43.2 | 41.1 | 34.9 | 41.5 |
-| **Open-source models** |  |  |  |  |  |  |  |  |
-| <img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18">&nbsp;Nemotron&#8209;3&#8209;Nano&#8209;Omni | 33.0 | 42.9 | 43.0 | 48.8 | 41.7 | 41.5 | 38.9 | 42.1 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen2.5&#8209;Omni&#8209;7B | 23.1 | 25.3 | 30.7 | 41.6 | 27.4 | 25.3 | 26.7 | 29.3 |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3&#8209;Omni&#8209;30B&#8209;A3B&#8209;Thinking | 26.4 | 37.2 | 38.5 | 46.8 | 35.6 | 35.5 | 35.2 | 37.2 |
-| **Ours** |  |  |  |  |  |  |  |  |
-| <img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;OmniReasoning&#8209;30B&#8209;A3B | 39.6 | 46.3 | 52.0 | 52.4 | 49.9 | 49.8 | 48.9 | 50.0 |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Model</th>
+      <th align="center">Music</th>
+      <th align="center">Sound</th>
+      <th align="center">Speech</th>
+      <th align="center">(0,1] minutes</th>
+      <th align="center">(1,5] minutes</th>
+      <th align="center">(5,10] minutes</th>
+      <th align="center">(10,30] minutes</th>
+      <th align="center">Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="9" align="center"><strong>Proprietary models</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.5&#8209;Flash</td>
+      <td align="center">56.9</td>
+      <td align="center">69.3</td>
+      <td align="center">70.1</td>
+      <td align="center">69.7</td>
+      <td align="center">68.0</td>
+      <td align="center">63.9</td>
+      <td align="center">64.8</td>
+      <td align="center">66.5</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3.1&#8209;Pro</td>
+      <td align="center">51.1</td>
+      <td align="center">65.8</td>
+      <td align="center">61.9</td>
+      <td align="center">67.3</td>
+      <td align="center">64.2</td>
+      <td align="center">59.5</td>
+      <td align="center">53.0</td>
+      <td align="center">60.7</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;3&#8209;Pro</td>
+      <td align="center">56.2</td>
+      <td align="center">54.1</td>
+      <td align="center">55.7</td>
+      <td align="center">61.0</td>
+      <td align="center">56.4</td>
+      <td align="center">52.9</td>
+      <td align="center">52.5</td>
+      <td align="center">55.5</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3.5&#8209;Omni&#8209;Plus</td>
+      <td align="center">42.3</td>
+      <td align="center">64.9</td>
+      <td align="center">53.3</td>
+      <td align="center">55.8</td>
+      <td align="center">55.2</td>
+      <td align="center">50.7</td>
+      <td align="center">53.4</td>
+      <td align="center">53.8</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/xiaomi.png" alt="xiaomi" height="18">&nbsp;MiMo&#8209;V2.5</td>
+      <td align="center">46.2</td>
+      <td align="center">47.6</td>
+      <td align="center">53.0</td>
+      <td align="center">56.6</td>
+      <td align="center">57.4</td>
+      <td align="center">47.6</td>
+      <td align="center">44.3</td>
+      <td align="center">51.6</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18">&nbsp;Gemini&#8209;2.0&#8209;Flash</td>
+      <td align="center">29.7</td>
+      <td align="center">40.3</td>
+      <td align="center">43.2</td>
+      <td align="center">49.4</td>
+      <td align="center">43.2</td>
+      <td align="center">41.1</td>
+      <td align="center">34.9</td>
+      <td align="center">41.5</td>
+    </tr>
+    <tr>
+      <th colspan="9" align="center"><strong>Open-source models</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/nvidia.png" alt="nvidia" height="18">&nbsp;Nemotron&#8209;3&#8209;Nano&#8209;Omni</td>
+      <td align="center">33.0</td>
+      <td align="center">42.9</td>
+      <td align="center">43.0</td>
+      <td align="center">48.8</td>
+      <td align="center">41.7</td>
+      <td align="center">41.5</td>
+      <td align="center">38.9</td>
+      <td align="center">42.1</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen2.5&#8209;Omni&#8209;7B</td>
+      <td align="center">23.1</td>
+      <td align="center">25.3</td>
+      <td align="center">30.7</td>
+      <td align="center">41.6</td>
+      <td align="center">27.4</td>
+      <td align="center">25.3</td>
+      <td align="center">26.7</td>
+      <td align="center">29.3</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;Qwen3&#8209;Omni&#8209;30B&#8209;A3B&#8209;Thinking</td>
+      <td align="center">26.4</td>
+      <td align="center">37.2</td>
+      <td align="center">38.5</td>
+      <td align="center">46.8</td>
+      <td align="center">35.6</td>
+      <td align="center">35.5</td>
+      <td align="center">35.2</td>
+      <td align="center">37.2</td>
+    </tr>
+    <tr>
+      <th colspan="9" align="center"><strong>Ours</strong></th>
+    </tr>
+    <tr>
+      <td align="center"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18">&nbsp;OmniReasoning&#8209;30B&#8209;A3B</td>
+      <td align="center">39.6</td>
+      <td align="center">46.3</td>
+      <td align="center">52.0</td>
+      <td align="center">52.4</td>
+      <td align="center">49.9</td>
+      <td align="center">49.8</td>
+      <td align="center">48.9</td>
+      <td align="center">50.0</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Training method ablation
 
