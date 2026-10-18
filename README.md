@@ -59,7 +59,7 @@ evidence chain.
 **OmniReasoningBench accuracy (%).** Our model is initialized by Qwen3-Omni-30B-A3B-Thinking.
 
 | Model | Modality | Reasoning over video<br>Multiple-choice | Reasoning over video<br>Open-ended | Reasoning beyond video<br>Multiple-choice | Reasoning beyond video<br>Open-ended | Overall |
-| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Proprietary models** |  |  |  |  |  |  |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.7-Flash | Omni | 57.6 | 47.7 | 72.0 | 58.0 | 57.6 |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.8-Flash | Omni | 55.2 | 49.6 | 69.6 | 60.0 | 57.1 |
@@ -92,7 +92,7 @@ evidence chain.
 #### Performance across benchmarks
 
 | Model | OmniVideoBench | LVOmniBench | Video-MMMU | Video-MME-v2 |
-| :--- | ---: | ---: | ---: | ---: |
+| :---: | :---: | :---: | :---: | :---: |
 | **Proprietary models** |  |  |  |  |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.5-Flash | 66.5 | 66.9 | 86.1 | 67.6 |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.1-Pro | 60.7 | 60.9 | 84.3 | 53.4 |
@@ -111,7 +111,7 @@ evidence chain.
 Music, Sound, and Speech are audio types; duration intervals are in minutes.
 
 | Model | Music | Sound | Speech | (0,1] minutes | (1,5] minutes | (5,10] minutes | (10,30] minutes | Average |
-| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Proprietary models** |  |  |  |  |  |  |  |  |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.5-Flash | 56.9 | 69.3 | 70.1 | 69.7 | 68.0 | 63.9 | 64.8 | 66.5 |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.1-Pro | 51.1 | 65.8 | 61.9 | 67.3 | 64.2 | 59.5 | 53.0 | 60.7 |
@@ -129,7 +129,7 @@ Music, Sound, and Speech are audio types; duration intervals are in minutes.
 #### Training method ablation
 
 | Method | OmniReasoningBench | OmniVideoBench | LVOmniBench | Video-MME-v2 | Video-MMMU |
-| :--- | ---: | ---: | ---: | ---: | ---: |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 | Qwen3-Omni-30B-A3B-Thinking | 33.2 | 37.2 | 37.7 | 36.5 | 68.3 |
 | + SFT | 36.1 | 47.0 | 40.2 | 40.3 | 73.7 |
 | + GRPO | 38.3 | 44.8 | 39.8 | 39.1 | 72.9 |
@@ -145,7 +145,7 @@ python -m pip install '.[engine]'
 ```
 
 | Stage               | Service                                                      | Configuration                                                |
-| ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| :---: | :---: | :---: |
 | 1 caption           | Gemini `generateContent`                                     | `GEMINI_API_KEY`, `GEMINI_API_BASE`, `GEMINI_AUTH_PREFIX`; `--gemini-model` |
 | 2 generate / adapt  | OpenAI-compatible chat (+ `/images/generations` for RBY figures) | `OPENAI_API_KEY`, `OPENAI_API_BASE`; `--openai-model`, `GEN_MODEL`, `IMAGE_MODEL` |
 | 3 verify / refine   | OpenAI-compatible chat                           | `DASHSCOPE_API_KEY`, optional `DASHSCOPE_BASE_URL`           |
