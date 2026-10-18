@@ -56,9 +56,9 @@ evidence chain.
 
 ### Results on OmniReasoningBench
 
-**OmniReasoningBench accuracy (%).** ROV = reasoning over video; RBY = reasoning beyond video. MCQ and OE denote multiple-choice and open-ended questions. Our model is initialized by Qwen3-Omni-30B-A3B-Thinking.
+**OmniReasoningBench accuracy (%).** Our model is initialized by Qwen3-Omni-30B-A3B-Thinking.
 
-| Model | Modality | ROV MCQ | ROV OE | RBY MCQ | RBY OE | Overall |
+| Model | Modality | Reasoning over video<br>Multiple-choice | Reasoning over video<br>Open-ended | Reasoning beyond video<br>Multiple-choice | Reasoning beyond video<br>Open-ended | Overall |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
 | **Proprietary models** |  |  |  |  |  |  |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.7-Flash | Omni | 57.6 | 47.7 | 72.0 | 58.0 | 57.6 |
@@ -110,7 +110,7 @@ evidence chain.
 
 Music, Sound, and Speech are audio types; duration intervals are in minutes.
 
-| Model | Music | Sound | Speech | (0,1] min | (1,5] min | (5,10] min | (10,30] min | Avg. |
+| Model | Music | Sound | Speech | (0,1] minutes | (1,5] minutes | (5,10] minutes | (10,30] minutes | Average |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | **Proprietary models** |  |  |  |  |  |  |  |  |
 | <img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18"> Gemini-3.5-Flash | 56.9 | 69.3 | 70.1 | 69.7 | 68.0 | 63.9 | 64.8 | 66.5 |
