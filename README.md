@@ -12,6 +12,9 @@
   <a href="https://pku-value-lab.github.io/OmniReasoning-Homepage/">
     <img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Online-8a2be2.svg?style=for-the-badge&logo=googlechrome&logoColor=white">
   </a>
+  <a href="https://qwen.ai/blog?id=qwen3.8-omni-flash">
+    <img alt="Qwen3.8-Omni Blog" src="assets/readme/badges/qwen_blog.svg" height="28">
+  </a>
   <a href="https://arxiv.org/pdf/2609.39490">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2609.39490-b31b1b.svg?style=for-the-badge&logo=arxiv&logoColor=white">
   </a>
