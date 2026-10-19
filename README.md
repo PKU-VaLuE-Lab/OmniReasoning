@@ -35,8 +35,7 @@
 **OmniQA** constructs audio-visual joint reasoning data. **OmniReasoningBench** evaluates
 *reasoning over video* and *reasoning beyond video*.
 The released datasets are **OmniReasoning-SFT-112K** (112,463 samples with synthesized thinking)
-and **OmniReasoning-RL-19K** (18,991 questions with evidence annotations), retained from the
-original 116,217 SFT and 19,849 RL samples; the benchmark has **1,150 questions**.
+and **OmniReasoning-RL-19K** (18,991 questions with evidence annotations),and the OmniReasoningBench has **1,150 questions**.
 
 
 </div>
