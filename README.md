@@ -102,6 +102,15 @@ evidence chain.
       <td align="center">54.0</td>
     </tr>
     <tr>
+      <td align="center" nowrap="nowrap"><img src="assets/readme/model_logos/qwen.png" alt="qwen" height="18" align="absmiddle">&#8288;&nbsp;&#8288;Qwen3.8&#8209;Omni&#8209;Flash</td>
+      <td align="center">Omni</td>
+      <td align="center">50.4</td>
+      <td align="center">42.1</td>
+      <td align="center">69.2</td>
+      <td align="center">57.3</td>
+      <td align="center">52.7</td>
+    </tr>
+    <tr>
       <td align="center" nowrap="nowrap"><img src="assets/readme/model_logos/gemini.png" alt="gemini" height="18" align="absmiddle">&#8288;&nbsp;&#8288;Gemini&#8209;3.1&#8209;Pro</td>
       <td align="center">Omni</td>
       <td align="center">51.9</td>
