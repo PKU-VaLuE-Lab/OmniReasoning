@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="omnireasoning.png" alt="OmniReasoning mascot" width="108">
+  <img src="assets/readme/omnireasoning.png" alt="OmniReasoning mascot" width="108">
 </p>
 
 <h1 align="center">OmniReasoning</h1>
@@ -18,11 +18,11 @@
   <a href="https://arxiv.org/pdf/2609.39490">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2609.39490-b31b1b.svg?style=for-the-badge&logo=arxiv&logoColor=white">
   </a>
-  <a href="#-benchmark">
-    <img alt="Benchmark" src="https://img.shields.io/badge/OmniReasoningBench-Coming%20Soon-4c8bf5.svg?style=for-the-badge&logo=databricks&logoColor=white">
+  <a href="https://huggingface.co/datasets/mjuicem/OmniReasoningBench">
+    <img alt="Benchmark" src="https://img.shields.io/badge/OmniReasoningBench-HUFFINGFACE-FFD21E.svg?style=for-the-badge&logo=huggingface&logoColor=FFD21E">
   </a>
-  <a href="#-code--models">
-    <img alt="Code" src="https://img.shields.io/badge/Data-Coming%20Soon-f59e0b.svg?style=for-the-badge&logo=github&logoColor=white">
+  <a href="https://huggingface.co/datasets/mjuicem/OmniReasoning-131K">
+    <img alt="Code" src="https://img.shields.io/badge/OmniReasoning--131K-HUFFINGFACE-FFD21E.svg?style=for-the-badge&logo=huggingface&logoColor=FFD21E">
   </a>
 
 </p>
@@ -486,6 +486,10 @@ Run all commands from the repository root. Requires **Python 3.10+** and **ffmpe
 python -m pip install '.[engine]'
 ```
 
+This installs the `omniqa` and `omnireasoning` commands and the data-engine dependencies.
+For local scene detection with `--plan-segmenter scenedetect`, install `'.[engine,scenes]'` instead.
+Install ffmpeg / ffprobe separately; they are not Python dependencies.
+
 | Stage               | Service                                                      | Configuration                                                |
 | :---: | :---: | :---: |
 | 1 caption           | Gemini `generateContent`                                     | `GEMINI_API_KEY`, `GEMINI_API_BASE`, `GEMINI_AUTH_PREFIX`; `--gemini-model` |
@@ -570,6 +574,9 @@ omniqa think --input outputs/run/refinement/refined_accepted.jsonl \
   --caption-root data/caption --output-dir outputs/run/thinking
 ```
 
+Only reasoning with a closing conclusion matching the verified answer enters `sft.jsonl`.
+Cached rows are checked again during export; inconsistent rows are retried on resume.
+
 
 
 ## Evaluation
@@ -596,6 +603,8 @@ Defaults: 2 fps, at most 512 frames, audio kept, `--max_tokens 32768 --temperatu
 
 Multiple-choice answers are scored by rule-based option-letter matching (no LLM fallback; an
 output without a parseable letter is wrong). Open-ended answers are judged by deepseek-v4-flash.
+Scoring automatically uses the answer after `</think>` and never reads option letters from
+the thinking block. An unfinished thinking block counts as a missing answer.
 Every benchmark question stays in the denominator: missing outputs, service errors and judge
 failures count as wrong.
 
@@ -634,4 +643,4 @@ If you find **OmniReasoning** useful, please cite:
 
 ## 📄 License
 
-The **OmniReasoning** data is released for **non-commercial research use** under **CC BY-NC 4.0**. Code and model licenses will accompany their respective releases.
+The **OmniReasoning** data is released for **non-commercial research use** under **CC BY-NC 4.0**.

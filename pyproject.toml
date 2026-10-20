@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnireasoning"
+version = "0.1.0"
+description = "Audio-visual reasoning data construction and benchmark evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27,<1",
+    "openai>=1,<3",
+    "requests>=2.31,<3",
+    "tqdm>=4.65,<5",
+]
+
+[project.optional-dependencies]
+engine = [
+    "dashscope>=1.20,<2",
+    "pandas>=2,<3",
+    "pyarrow>=14",
+]
+scenes = ["scenedetect[opencv]>=0.6.3,<0.7"]
+
+[project.scripts]
+omniqa = "OmniQA.pipeline:main"
+omnireasoning = "OmniReasoningBench.evaluate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["OmniQA*", "OmniReasoningBench*"]
+namespaces = false
