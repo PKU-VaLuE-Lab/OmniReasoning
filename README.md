@@ -327,7 +327,7 @@ evidence chain.
   </tbody>
 </table>
 
-#### Performance by audio type and video duration
+#### Performance by audio type and video duration at OmniVideoBench
 
 Music, Sound, and Speech are audio types; duration intervals are in minutes.
 
