@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  <img src="assets/readme/qwen_logo.png" alt="Qwen" height="52" align="middle">&nbsp;OmniReasoning
+  <sub><sub><sub><img src="assets/readme/qwen_logo.png" alt="Qwen" height="52"></sub></sub></sub>&nbsp;OmniReasoning
 </h1>
 
 <p align="center"><strong>Pushing the Limits of Audio-Visual Joint Reasoning</strong></p>
