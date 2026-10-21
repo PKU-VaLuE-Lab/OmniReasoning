@@ -2,7 +2,9 @@
   <img src="assets/readme/omnireasoning.png" alt="OmniReasoning mascot" width="108">
 </p>
 
-<h1 align="center">OmniReasoning</h1>
+<h1 align="center">
+  <sub><img src="assets/readme/qwen_logo.png" alt="Qwen" height="36"></sub>&nbsp;OmniReasoning
+</h1>
 
 <p align="center"><strong>Pushing the Limits of Audio-Visual Joint Reasoning</strong></p>
 
